@@ -6,7 +6,7 @@ public class Service {
     private int amount, price;
     private int sum;
 
-
+    public static int laborCost = 0;
 
     private String unit;
 
@@ -16,6 +16,7 @@ public class Service {
         this.unit = unit;
         this.price = price;
         this.sum = price * amount;
+        laborCost += sum;
     }
 
     public String getName() {

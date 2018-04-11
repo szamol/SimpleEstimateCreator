@@ -5,10 +5,10 @@ import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.apache.poi.xwpf.usermodel.XWPFRun;
 
-public class Client {
-    String name;
+public class ClientWriter {
+    private String name;
 
-    Client(String name) {
+    ClientWriter(String name) {
         this.name = name;
     }
 

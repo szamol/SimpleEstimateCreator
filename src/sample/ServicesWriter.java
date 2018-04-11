@@ -8,7 +8,7 @@ import java.math.BigInteger;
 public class ServicesWriter {
     private ObservableList<Service> serviceList;
 
-    public ServicesWriter(ObservableList<Service> serviceList) {
+    ServicesWriter(ObservableList<Service> serviceList) {
         this.serviceList = serviceList;
     }
 

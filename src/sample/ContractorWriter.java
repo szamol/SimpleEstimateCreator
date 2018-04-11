@@ -5,7 +5,7 @@ import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.apache.poi.xwpf.usermodel.XWPFRun;
 
-public class Contractor {
+public class ContractorWriter {
     private String company;
     private String name;
     private String city;
@@ -13,7 +13,7 @@ public class Contractor {
     private String phone;
 
 
-    Contractor(String company, String name, String city, String adress, String phone) {
+    ContractorWriter(String company, String name, String city, String adress, String phone) {
         this.company = company;
         this.name = name;
         this.city = city;

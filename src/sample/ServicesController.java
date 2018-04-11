@@ -2,11 +2,18 @@ package sample;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -46,13 +53,14 @@ public class ServicesController implements Initializable {
         priceInputId.clear();
     }
 
-    public void saveButtonHandler() {
+    public void nextButtonHandler(ActionEvent e) throws IOException{
         DocumentManger.addServicesToDocument(serviceList);
-        DocumentManger.saveDocument();
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Pomyślnie zapisano!");
-        alert.setContentText("Dokument został zapisany!");
-        alert.showAndWait();
+        Parent root4 = FXMLLoader.load(getClass().getResource("resources/View/SummaryView.fxml"));
+        Scene scene4 = new Scene(root4);
+
+        Stage window = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        window.setScene(scene4);
+        window.show();
     }
 
 }

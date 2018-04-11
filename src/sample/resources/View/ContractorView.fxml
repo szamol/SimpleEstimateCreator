@@ -10,10 +10,10 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ContractorController">
    <top>
-      <Label prefHeight="46.0" prefWidth="115.0" text="Dane wykonawcy" BorderPane.alignment="CENTER" />
+      <Label prefHeight="46.0" prefWidth="115.0" text="Dane wykonawcy" underline="true" BorderPane.alignment="CENTER" />
    </top>
    <bottom>
-      <Button fx:id="contractorButton" mnemonicParsing="false" onAction="#buttonHandler" text="Zatwierdź" BorderPane.alignment="CENTER">
+      <Button mnemonicParsing="false" onAction="#buttonHandler" text="Zatwierdź" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets bottom="10.0" />
          </BorderPane.margin></Button>
