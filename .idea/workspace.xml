@@ -6,22 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Basic validation &amp; cleaner code">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/SimpleEstimateCreator_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleEstimateCreator" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/sample/InputValidation.java" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/firstDoc.docx" afterPath="$PROJECT_DIR$/firstDoc.docx" />
       <change beforePath="$PROJECT_DIR$/out/production/SimpleEstimateCreator/sample/ClientController.class" afterPath="$PROJECT_DIR$/out/production/SimpleEstimateCreator/sample/ClientController.class" />
       <change beforePath="$PROJECT_DIR$/out/production/SimpleEstimateCreator/sample/ClientWriter.class" afterPath="$PROJECT_DIR$/out/production/SimpleEstimateCreator/sample/ClientWriter.class" />
       <change beforePath="$PROJECT_DIR$/out/production/SimpleEstimateCreator/sample/resources/View/ClientView.fxml" afterPath="$PROJECT_DIR$/out/production/SimpleEstimateCreator/sample/resources/View/ClientView.fxml" />
       <change beforePath="$PROJECT_DIR$/out/production/SimpleEstimateCreator/sample/resources/View/ContractorView.fxml" afterPath="$PROJECT_DIR$/out/production/SimpleEstimateCreator/sample/resources/View/ContractorView.fxml" />
       <change beforePath="$PROJECT_DIR$/out/production/SimpleEstimateCreator/sample/resources/View/ServicesView.fxml" afterPath="$PROJECT_DIR$/out/production/SimpleEstimateCreator/sample/resources/View/ServicesView.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/sample/ClientController.java" afterPath="$PROJECT_DIR$/src/sample/ClientController.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/ContractorController.java" afterPath="$PROJECT_DIR$/src/sample/ContractorController.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/ServicesController.java" afterPath="$PROJECT_DIR$/src/sample/ServicesController.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/SummaryController.java" afterPath="$PROJECT_DIR$/src/sample/SummaryController.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,8 +73,8 @@
       <file leaf-file-name="ContractorController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/ContractorController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+            <state relative-caret-position="357">
+              <caret line="41" column="25" lean-forward="true" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -216,7 +207,7 @@
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1938" />
@@ -443,19 +434,26 @@
       <option name="project" value="LOCAL" />
       <updated>1523468622858</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Basic validation &amp; cleaner code">
+      <created>1523516283539</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1523516283539</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="1302000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -953,8 +951,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/ContractorController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+        <state relative-caret-position="357">
+          <caret line="41" column="25" lean-forward="true" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
           <folding />
         </state>
       </provider>
