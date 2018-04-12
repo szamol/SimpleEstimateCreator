@@ -27,13 +27,15 @@ public class SummaryController implements Initializable, InputValidation {
     }
 
     public void saveButtonHandler() {
-        DocumentManger.addSummaryToDocument(Service.laborCost, Integer.parseInt(materialsCostId.getText()), isVatAddedCheckBox.isSelected());
-        DocumentManger.saveDocument();
+        if (validation()) {
+            DocumentManger.addSummaryToDocument(Service.laborCost, Integer.parseInt(materialsCostId.getText()), isVatAddedCheckBox.isSelected());
+            DocumentManger.saveDocument();
 
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Zapis");
-        alert.setHeaderText("Pomyślnie zapisano!");
-        alert.showAndWait();
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Zapis");
+            alert.setHeaderText("Pomyślnie zapisano!");
+            alert.showAndWait();
+        } else popAlert();
     }
 
     @Override
