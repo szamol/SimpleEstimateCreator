@@ -29,7 +29,7 @@
          </BorderPane.margin></Label>
    </top>
    <bottom>
-      <Button fx:id="clientButton" mnemonicParsing="false" onAction="#buttonHandler" text="Zatwierdź" BorderPane.alignment="CENTER">
+      <Button mnemonicParsing="false" onAction="#buttonHandler" text="Zatwierdź" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets bottom="10.0" />
          </BorderPane.margin></Button>

@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ServicesController implements Initializable {
+public class ServicesController implements Initializable, InputValidation {
 
     @FXML
     TableView<Service> table;
@@ -44,7 +44,6 @@ public class ServicesController implements Initializable {
         sumCol.setCellValueFactory(new PropertyValueFactory<>("sum"));
     }
 
-
     public void addNewService() {
         serviceList.add(new Service(nameInputId.getText(), Integer.parseInt(amountInputId.getText()), unitChoiceBoxId.getValue(), Integer.parseInt(priceInputId.getText())));
         table.setItems(serviceList);
@@ -53,14 +52,30 @@ public class ServicesController implements Initializable {
         priceInputId.clear();
     }
 
-    public void nextButtonHandler(ActionEvent e) throws IOException{
-        DocumentManger.addServicesToDocument(serviceList);
-        Parent root4 = FXMLLoader.load(getClass().getResource("resources/View/SummaryView.fxml"));
-        Scene scene4 = new Scene(root4);
 
-        Stage window = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        window.setScene(scene4);
-        window.show();
+
+    public void nextButtonHandler(ActionEvent e) throws IOException{
+        if(validation()) {
+            DocumentManger.addServicesToDocument(serviceList);
+            Parent root4 = FXMLLoader.load(getClass().getResource("resources/View/SummaryView.fxml"));
+            Scene scene4 = new Scene(root4);
+
+            Stage window = (Stage) ((Node) e.getSource()).getScene().getWindow();
+            window.setScene(scene4);
+            window.show();
+        } else popAlert();
     }
 
+    @Override
+    public boolean validation() {
+        return !serviceList.isEmpty();
+    }
+
+    @Override
+    public void popAlert() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Błąd!");
+        alert.setHeaderText("Brak pozycji na liście!");
+        alert.showAndWait();
+    }
 }

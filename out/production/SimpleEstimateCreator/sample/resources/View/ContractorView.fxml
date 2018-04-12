@@ -13,7 +13,7 @@
       <Label prefHeight="46.0" prefWidth="115.0" text="Dane wykonawcy" underline="true" BorderPane.alignment="CENTER" />
    </top>
    <bottom>
-      <Button fx:id="contractorButton" mnemonicParsing="false" onAction="#buttonHandler" text="Zatwierdź" BorderPane.alignment="CENTER">
+      <Button mnemonicParsing="false" onAction="#buttonHandler" text="Zatwierdź" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets bottom="10.0" />
          </BorderPane.margin></Button>

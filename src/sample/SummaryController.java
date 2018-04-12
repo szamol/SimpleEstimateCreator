@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SummaryController implements Initializable {
+public class SummaryController implements Initializable, InputValidation {
 
     @FXML
     Label laborCostId;
@@ -33,6 +33,19 @@ public class SummaryController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Zapis");
         alert.setHeaderText("Pomyślnie zapisano!");
+        alert.showAndWait();
+    }
+
+    @Override
+    public boolean validation() {
+        return !materialsCostId.equals("");
+    }
+
+    @Override
+    public void popAlert() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Błąd!");
+        alert.setHeaderText("Wypełnij puste pola.");
         alert.showAndWait();
     }
 }
