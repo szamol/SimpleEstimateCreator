@@ -16,7 +16,7 @@ public class SummaryController implements Initializable, InputValidation {
     Label laborCostId;
 
     @FXML
-    TextField materialsCostId;
+    TextField materialsCostId, fileNameId;
 
     @FXML
     CheckBox isVatAddedCheckBox;
@@ -29,7 +29,7 @@ public class SummaryController implements Initializable, InputValidation {
     public void saveButtonHandler() {
         if (validation()) {
             DocumentManger.addSummaryToDocument(Service.laborCost, Integer.parseInt(materialsCostId.getText()), isVatAddedCheckBox.isSelected());
-            DocumentManger.saveDocument();
+            DocumentManger.saveDocument(fileNameId.getText());
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Zapis");
@@ -40,7 +40,7 @@ public class SummaryController implements Initializable, InputValidation {
 
     @Override
     public boolean validation() {
-        return !materialsCostId.equals("");
+        return !materialsCostId.equals("") && !fileNameId.equals("");
     }
 
     @Override

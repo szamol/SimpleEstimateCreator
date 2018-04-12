@@ -29,9 +29,9 @@ public class DocumentManger {
         summaryWriter.createSummaryParagraph(document);
     }
 
-    public static void saveDocument() {
+    public static void saveDocument(String fileName) {
         try {
-            FileOutputStream output = new FileOutputStream("firstDoc.docx");
+            FileOutputStream output = new FileOutputStream(fileName + ".docx");
             document.write(output);
             output.close();
         } catch (Exception e) {
