@@ -39,7 +39,6 @@ public class ModifyBaseController implements Initializable {
 
     public void removeButtonHandler() {
         jsonList.remove(listOfServices.getSelectionModel().getSelectedIndex());
-        System.out.println(listOfServices.getSelectionModel().getSelectedItem());
     }
 
     public void saveButtonHandler() {

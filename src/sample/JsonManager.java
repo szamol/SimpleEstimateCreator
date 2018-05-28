@@ -3,7 +3,6 @@ package sample;
 import com.google.gson.Gson;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
