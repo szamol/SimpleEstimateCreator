@@ -34,6 +34,9 @@ public class ServicesController implements Initializable, InputValidation {
     @FXML
     ChoiceBox<String> unitChoiceBoxId;
 
+    @FXML
+    ListView<String> servicesNames;
+
     private ObservableList<Service> serviceList = FXCollections.observableArrayList();
 
     @Override
@@ -42,17 +45,39 @@ public class ServicesController implements Initializable, InputValidation {
         amountCol.setCellValueFactory(new PropertyValueFactory<>("amount"));
         priceCol.setCellValueFactory(new PropertyValueFactory<>("price"));
         sumCol.setCellValueFactory(new PropertyValueFactory<>("sum"));
+
+        JsonManager manager = new JsonManager();
+        servicesNames.setItems(manager.readFromJson());
+
+        servicesNames.getSelectionModel().selectedItemProperty().addListener(e -> nameInputId.setText(servicesNames.getSelectionModel().getSelectedItem()));
     }
 
     public void addNewService() {
-        serviceList.add(new Service(nameInputId.getText(), Integer.parseInt(amountInputId.getText()), unitChoiceBoxId.getValue(), Integer.parseInt(priceInputId.getText())));
-        table.setItems(serviceList);
-        nameInputId.clear();
-        amountInputId.clear();
-        priceInputId.clear();
+        if(!nameInputId.getText().isEmpty() && !amountInputId.getText().isEmpty() && !priceInputId.getText().isEmpty()) {
+            serviceList.add(new Service(nameInputId.getText(), Integer.parseInt(amountInputId.getText()), unitChoiceBoxId.getValue(), Integer.parseInt(priceInputId.getText())));
+            table.setItems(serviceList);
+            nameInputId.clear();
+            amountInputId.clear();
+            priceInputId.clear();
+        }
     }
 
-
+    public void modifyBaseHandler() {
+        Parent root;
+        try {
+            root = FXMLLoader.load(getClass().getResource("resources/View/ModifyBaseView.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Modyfikacja bazy usług");
+            stage.setScene(new Scene(root));
+            stage.show();
+            stage.setOnCloseRequest(e-> {
+                JsonManager manager = new JsonManager();
+                servicesNames.setItems(manager.readFromJson());
+            });
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public void nextButtonHandler(ActionEvent e) throws IOException{
         if(validation()) {

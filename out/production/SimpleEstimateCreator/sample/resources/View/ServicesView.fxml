@@ -6,21 +6,23 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ServicesController">
    <center>
-      <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="table" prefHeight="747.0" prefWidth="592.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn fx:id="nameCol" prefWidth="498.0" resizable="false" text="Nazwa" />
-          <TableColumn fx:id="amountCol" prefWidth="100.0" resizable="false" text="Ilość" />
-            <TableColumn fx:id="priceCol" prefWidth="100.0" resizable="false" text="Cena" />
-            <TableColumn fx:id="sumCol" prefWidth="100.0" resizable="false" text="Razem" />
+          <TableColumn fx:id="nameCol" prefWidth="252.0" resizable="false" text="Nazwa" />
+          <TableColumn fx:id="amountCol" prefWidth="70.0" resizable="false" text="Ilość" />
+            <TableColumn fx:id="priceCol" prefWidth="68.0" resizable="false" text="Cena" />
+            <TableColumn fx:id="sumCol" prefWidth="121.0" resizable="false" text="Razem" />
         </columns>
       </TableView>
    </center>
@@ -51,7 +53,7 @@
             <Separator orientation="VERTICAL" prefHeight="43.0" prefWidth="20.0" />
             <Label prefHeight="34.0" prefWidth="56.0" text="Cena:" />
             <TextField fx:id="priceInputId" prefHeight="31.0" prefWidth="50.0" />
-            <Button  mnemonicParsing="false" onAction="#addNewService" text="Dodaj">
+            <Button mnemonicParsing="false" onAction="#addNewService" text="Dodaj">
                <HBox.margin>
                   <Insets left="15.0" />
                </HBox.margin>
@@ -64,4 +66,15 @@
          </BorderPane.margin>
       </HBox>
    </bottom>
+   <right>
+      <VBox prefHeight="747.0" prefWidth="289.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Modyfikuj bazę" onAction="#modifyBaseHandler">
+               <VBox.margin>
+                  <Insets left="80.0" />
+               </VBox.margin></Button>
+            <ListView fx:id="servicesNames" prefHeight="716.0" prefWidth="268.0" />
+         </children>
+      </VBox>
+   </right>
 </BorderPane>

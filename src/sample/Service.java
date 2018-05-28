@@ -10,6 +10,10 @@ public class Service {
 
     private String unit;
 
+    Service(String name) {
+        this.name = name;
+    }
+
     Service(String name, int amount,String unit, int price) {
         this.name = name;
         this.amount = amount;
